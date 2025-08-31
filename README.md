@@ -11,7 +11,7 @@ directly within the included Bitmap Display for programs in Saturn.
 [YouTube Demo](https://youtu.be/aSulnemWhpY?si=VUlJW8QEGbrhhQ--)
 
 ### Basic View
-![images/first_run.png](images/first_run.png)
+![images/initial_view.png](images/initial_view.png)
 
 ## Playing The Game
 1. Download the `Dr_Mario.asm` file, and open it in Saturn.
@@ -50,9 +50,9 @@ and writing to specific memory addresses, and instead consider my functions and 
 
 ## Immutable Data Stored In Memory
 
-![images/Immutable_Data.png](images/Immutable_Data.png)
+![images/immutable_data.png](images/immutable_data.png)
 
 ## Mutable Data Stored In Memory
 
-![images/Mutable_Data.png](images/Mutable_Data.png)
-![images/mutable_part2.png](images/mutable_part2.png)
+![images/mutable_data_1.png](images/mutable_data_1.png)
+![images/mutable_data_2.png](images/mutable_data_2.png)
