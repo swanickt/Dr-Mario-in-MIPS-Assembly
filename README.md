@@ -14,7 +14,7 @@ directly within the included Bitmap Display for programs in Saturn.
 ![images/initial_view.png](images/initial_view.png)
 
 ## Playing The Game
-1. Download the `Dr_Mario.asm` file, and open it in Saturn.
+1. Download the `dr_mario.asm` file, and open it in Saturn.
 2. Run the program and go to the Bitmap Display. Set the display width and display height to 128, and the unit width and height width to 2 pixels.
 3. Rerun the program, open the Bitmap Display and click on the display to connect your keyboard. You can now move the capsules using `w,a,s,d`, and begin the game!
 
@@ -43,7 +43,7 @@ tested, this allowed me to know exactly what each call would achieve, as I worke
 - To facilitate the manipulation of pixels/colours on the bitmap (i.e. accessing and writing to memory adresses repre-
 senting specific pixels in the bitmap), a game field is stored in memory. This game field represents a 64x64 array (in
 pixels, this is the size of the display) which holds the current state of the game. Using `Cell Getter` and `Cell Setter`
-functions, I can use indices for the x-coordinate (0-63) and y-coordinate (also 0-63), which are then translated into
+functions, I can use indices for the `x-coordinate` (0-63) and `y-coordinate` (also 0-63), which are then translated into
 the corresponding memory address for that pixel. This allowed me to detach from worrying about constantly loading
 and writing to specific memory addresses, and instead consider my functions and in memory data in terms of the
 64x64 grid for the bitmap.
