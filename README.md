@@ -7,6 +7,12 @@ as appealing as the actual game, the functionality is almost exactly the same. T
 the [Saturn](https://github.com/1whatleytay/saturn) IDE/MIPS Assembler and as such, is completely written using MIPS Aseembly. The game can be run
 directly within the included Bitmap Display for programs in Saturn.
 
+### Gameplay Demo
+[YouTube Demo](https://youtu.be/aSulnemWhpY?si=VUlJW8QEGbrhhQ--)
+
+### Basic View
+![images/first_run.png](images/first_run.png)
+
 ## Playing The Game
 1. Download the `Dr_Mario.asm` file, and open it in Saturn.
 2. Run the program and go to the Bitmap Display. Set the display width and display height to 128, and the unit width and height width to 2 pixels.
@@ -28,3 +34,25 @@ viruses are erased from the screen and any unsupported whole or half capsules wi
 hit something that supports them. Any new alignments formed after this fall will also disappear.
 - Once the player has eliminated all the viruses, they have won the game. If any part of the bottles opening
 is blocked by a capsule, the game is over and the player has lost.
+
+## Implementation Details
+- Due to the low level nature of assembly and the associated difficulties in keeping track of MIPS assembly code, the
+program is implemented using a strict function based approach. That is, all functionality and operations are achieved
+through functions called by the game loop, which in turn call on each other. Once a function was implemented and
+tested, this allowed me to know exactly what each call would achieve, as I worked on further features.
+- To facilitate the manipulation of pixels/colours on the bitmap (i.e. accessing and writing to memory adresses repre-
+senting specific pixels in the bitmap), a game field is stored in memory. This game field represents a 64x64 array (in
+pixels, this is the size of the display) which holds the current state of the game. Using `Cell Getter` and `Cell Setter`
+functions, I can use indices for the x-coordinate (0-63) and y-coordinate (also 0-63), which are then translated into
+the corresponding memory address for that pixel. This allowed me to detach from worrying about constantly loading
+and writing to specific memory addresses, and instead consider my functions and in memory data in terms of the
+64x64 grid for the bitmap.
+
+## Immutable Data Stored In Memory
+
+![images/Immutable_Data.png](images/Immutable_Data.png)
+
+## Mutable Data Stored In Memory
+
+![images/Mutable_Data.png](images/Mutable_Data.png)
+![images/mutable_part2.png](images/mutable_part2.png)
